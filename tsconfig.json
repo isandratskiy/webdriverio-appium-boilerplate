@@ -12,6 +12,7 @@
         "./tests/*"
       ]
     },
+    "outDir": "./dist",
     "target": "es2017",
     "module": "commonjs",
     "strict": true,
@@ -20,7 +21,8 @@
       "@wdio/sync",
       "@wdio/mocha-framework",
       "mocha",
-      "node"
+      "node",
+      "chai"
     ],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true

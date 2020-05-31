@@ -1,8 +1,8 @@
 const {config} = require('./wdio.shared.conf');
 
 config.specs = [
-    './tests/**/*.ts',
-    './tests/**/*.js'
+    './test/**/*.ts',
+    './test/**/*.js'
 ];
 
 config.capabilities = [
@@ -10,7 +10,7 @@ config.capabilities = [
         platformName: 'Android',
         automationName: 'UiAutomator2',
         deviceName: 'Android Emulator',
-        app: './src/resources/ApiDemos-debug.apk',
+        app: './app/ApiDemos-debug.apk',
         newCommandTimeout: 30 * 60000,
         maxInstances: 1
     }
