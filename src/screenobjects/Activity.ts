@@ -4,5 +4,3 @@ export default class Activity {
         return driver.startActivity("io.appium.android.apis", activity)
     }
 }
-
-//export default new Activity();
