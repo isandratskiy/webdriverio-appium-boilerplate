@@ -10,18 +10,8 @@ exports.config = {
         ui: 'bdd',
         timeout: timeout
     },
-    before: function (capabilities, specs) {
-        require('ts-node').register({
-            files: true
-        });
-    },
-    afterTest: function (test) {
-        if (test.error !== undefined) {
-            driver.takeScreenshot()
-        }
-    },
     sync: true,
-    logLevel: 'error',
+    logLevel: 'silent',
     deprecationWarnings: false,
     bail: 0,
     waitforTimeout: 10000,
@@ -34,6 +24,16 @@ exports.config = {
             disableWebdriverScreenshotsReporting: false
         }
     ]],
+    before: function (capabilities, specs) {
+        require('ts-node').register({
+            files: true
+        });
+    },
+    afterTest: function (test) {
+        if (test.error !== undefined) {
+            driver.takeScreenshot()
+        }
+    },
     port: 4723,
     services: [
         ['appium',
